@@ -1,5 +1,6 @@
 // @author: Laksh Sadhwani
-// Code : (What is your code)
+// Github : https://github.com/Laaaaksh
+// Code : (__Name__)
 
 #include<bits/stdc++.h>
 using namespace std;

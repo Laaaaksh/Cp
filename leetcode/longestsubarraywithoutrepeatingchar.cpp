@@ -6,7 +6,7 @@ public:
         int left = 0;
         int right = 0;
         int n = s.length();
-        while(right < n)
+        while(right < n)	
         {
             if(mpp.find(s[right])!=mpp.end())
             {

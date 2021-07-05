@@ -1,32 +1,30 @@
-class Solution {
-public: 
-	vector<int> bfstraversal(vector<int>&nums, int V)
+vector<int> bfs(int v, vector<int> adj[])
+{
+	vector<int> bfsAnswer;
+	vector<int> bfs(v+1,0);
+	for(int i=1; i<=v;i++)
 	{
-	vector<int> bfs;
-	vector<int> visited(n+1 , -1);
-	for(int i = 1 ; i<= V; i++)
-	{
-		// first priority is to check whether the node is visited or not
-			if(!visited[i])
+		if(!vis[i])
+		{
+			// very important queue will be declared here
+			queue<int> q;
+			vis[i]=1;
+			q.push(i);
+			while(!q.empty())
 			{
-				queue<int> q;
-				q.push(i);
-				vis[i]=1;
-				// after pushing in queue we have to visit it
-				while(!q.empty())
+				int  node = q.front();
+				q.pop();
+				bfsAnswer.push_back(node);
+				//push is to be done while popping
+				for(auto it : ads[node])
 				{
-					int node = q.front();
-					q.pop();
-					bfs.push_back(node);
-					for(auto it : nums[node])
+					if(!vis[it])
 					{
-						if(!visited[i]){
-							q.push(it);
-							visited[it]=1;
-						}
+						q.push(it);
+						vis[it]=1;
 					}
 				}
 			}
+		}
 	}
-	}
-};
+}

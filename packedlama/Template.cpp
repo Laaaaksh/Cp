@@ -4,12 +4,26 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-#define S 5
-typedef pair<int, int> iPair;
-typedef vector<int> V;
-typedef vector<bool> B;
-typedef tuple<int,int,int> T;
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int,int> pi;
+#define pb push_back;
+#define mp make_pair;
+#define f first;
+#define s second;
+#define rep(i,a,b) for(int i = a; i<=bs;i++)
 int main()
 {
+ios::sync_with_stdio(0);
+cin.tie(0);
+// freopen("input.txt","r",stdin);
+// freopen("output.txt","w",stdout);
+// string x;
+// getline(cin,x);
+// while(cin >> x)
+// {
+
+// }
+// __int128_t temp;
 return 0;
 }

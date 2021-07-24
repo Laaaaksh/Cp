@@ -11,7 +11,7 @@ typedef pair<int,int> pi;
 #define mp make_pair;
 #define f first;
 #define s second;
-#define rep(i,a,b) for(int i = a; i<=bs;i++)
+#define rep(i,a,b) for(int i = a; i<=b;i++)
 int main()
 {
 ios::sync_with_stdio(0);

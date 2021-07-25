@@ -24,10 +24,10 @@ int main(){
 	pq.push(make_pair(0,source));	// (dist,from)
 	
 	while( !pq.empty() ){
-		int prev = pq.top().second;
+		int i = pq.top().second;
 		// this is the element
 		pq.pop();
-		for( auto it : graph[prev]){
+		for( auto it : graph[i]){
 			int next = it->first;
 			// this is the next element
 			int nextDist = it->second;

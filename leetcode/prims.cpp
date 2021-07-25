@@ -25,8 +25,9 @@ int main()
 
     priority_queue< pair<int,int>, vector <pair<int,int>> , greater<pair<int,int>> > pq;
 	key[0] = 0;
+	// need to take minimum key everytime
 	pq.push(key[0],0);
-	// pushing the key and the index
+	// pushing the key and the element(index)
 	while(!pq.empty())
 	{
 		int u = pq.top().second;
@@ -35,8 +36,8 @@ int main()
 		mstset[u] = true;
 		for(auto point : graph[u])
 		{
-			int fir = point.first;
-			int sec = point.second;
+			int fir = point.first;//(element index)
+			int sec = point.second;//(weight)
 			if(mstset[fir] == false && key[fir] > sec)
 			{
 				parent[fir] = u;

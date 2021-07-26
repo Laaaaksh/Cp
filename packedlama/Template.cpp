@@ -24,6 +24,6 @@ cin.tie(0);
 // {
 
 // }
-// __int128_t temp;
+// int128_t temp;
 return 0;
 }

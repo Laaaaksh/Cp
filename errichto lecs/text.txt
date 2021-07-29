@@ -1,0 +1,2 @@
+in binary search either we are looking for some value
+either we are looking for first or last element that satisfies that conditon

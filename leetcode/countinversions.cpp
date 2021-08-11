@@ -24,6 +24,7 @@ int merge(int arr[], int temp[], int left, int mid,
 {
     int i, j, k;
     int inv_count = 0;
+    // this will have a seperate inv count
 
     i = left; /* i is index for left subarray*/
     j = mid; /* j is index for right subarray*/

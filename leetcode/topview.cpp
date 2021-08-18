@@ -4,6 +4,7 @@
        return;
     if (m.count(dist) == 0 || m[dist].second > level)
         m[dist] = make_pair(node->data, level);
+    // this will just replace the existing data
 
     top_view(node->left, m, dist-1, level + 1);
     top_view(node->right, m, dist+1, level + 1);

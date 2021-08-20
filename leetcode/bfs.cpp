@@ -27,4 +27,5 @@ vector<int> bfs(int v, vector<int> adj[])
 			}
 		}
 	}
+	return bfsAnswer;
 }

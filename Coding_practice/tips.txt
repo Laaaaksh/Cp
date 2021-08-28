@@ -1,0 +1,38 @@
+you are always not meant to look for the best time complexity
+STAR- Situation Task Action Result
+....................
+C notes below - 
+ #line is used as a preprocessor to re-set the line number in the code
+ The <bits/stdc++. h> is a header file. This file includes all standard library
+ using namespace std ; defines the scope of all the variables that you want to use.
+ The static variable retains its value between multiple function calls.
+ Usage of Pointers - accessing array elements
+ Dynamic memory allocation
+ call by reference
+ A pointer that can access all the 16 segments of RAM is called far pointer.
+ When a pointer points to a deallocated memory it is known as a dangling pointer.
+ Pointer to pointer contains the address of another pointer
+ Static memory is assigned during the compile time and not during the run time and it is faster.
+ malloc function allocates memory during allocation, intitializes it with the garbage value , where as calloc initializes it with the 0
+ ptr = (cast-type*) calloc(n,element-size) where n is the number of elements
+
+ ptr = realloc(ptr,newsize);
+ free(ptr);
+ union holds the memory of the largest variable only
+ sprintf stands for string print - it returns the total number of characters in the string
+
+ to run a progam without a main function
+ #include<stdio.h>    
+#define start main    
+void start() {    
+   printf("Hello");    
+}
+
+token is the smallest indvidual unit of the program
+command line argument - arguments passed to the main function
+
+getch() doesn't display the character while taking in whereas getche() displays it
+
+Maximum lenght of an identifier - 32
+typecasting
+..................................

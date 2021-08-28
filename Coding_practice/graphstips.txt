@@ -1,0 +1,5 @@
+store in struct weight, u, v;
+else stroe in vector<pair<int,int>> adj[N];
+where N is the number of nodes
+assign we can change size and initialize at the same time
+wherease in resize we can just change the size

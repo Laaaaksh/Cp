@@ -64,52 +64,31 @@ int gcd(int a, int b) {
     while (b) b ^= a ^= b ^= a %= b;
     return a;
 }
-// void allprimes()
-// {
-//     rep(i,0,maxl)
-//         dp[i] = true;
-//     dp[0]=dp[1]=false;
-//     for(int i = 2 ; i*i<=maxl;i++)
-//     {
-//         if(dp[i]==1)
-//         {
-//             for(int j = i * i ; j<=maxl;j+=i)
-//             {
-//                 dp[j] = false;
-//             }
-//         }
-//     }
-//     rep(i,2,maxl)
-//     {
-//         if(dp[i]==true)
-//             result.pb(i);
-//     }
-
-// }
 void solve(){
- int n; cin >> n;
- string res = "";
- while(n)
- {
-    if(!(n&1))
+    int n;
+    cin >> n;
+    string s_1;
+    cin >> s_1;
+    rep(i,0,n-1)
     {
-        res+='B';
-        n = n/2;
+        if(s_1[i]=='0')
+        {
+            if(i>=n/2){
+                cout<<1<<space<<i+1<<space<<1<<space<<i<<n1;
+                return;
+            }
+                cout<<i+1<<space<<n<<space<<i+2<<space<<n<<n1;
+                return;
+        }
     }
-    else
-    {
-        res+='A';
-        n--;
-    }
- }
- reverse(res.begin(), res.end());
- cout << res;
-}
+        cout << 1 << space << n-1 << space << 2 << space << n << n1;
+        return;
+}   
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(0);cout.tie(0);
-    int t=1;
-    // cin>>t;
+    int t=1; 
+    cin>>t;
     while(t--) solve();
     return 0;
 }

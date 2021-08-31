@@ -65,30 +65,13 @@ int gcd(int a, int b) {
     return a;
 }
 void solve(){
-    int n;
-    cin >> n;
-    string s_1;
-    cin >> s_1;
-    rep(i,0,n-1)
-    {
-        if(s_1[i]=='0')
-        {
-            if(i>=n/2){
-                cout<<1<<space<<i+1<<space<<1<<space<<i<<n1;
-                return;
-            }
-                cout<<i+1<<space<<n<<space<<i+2<<space<<n<<n1;
-                return;
-        }
-    }
-        cout << 1 << space << n-1 << space << 2 << space << n << n1;
-        return;
+    cout << ppc(10) << n1;
 }   
 signed main(){
     ios_base::sync_with_stdio(false);
     cin.tie(0);cout.tie(0);
     int t=1; 
-    cin>>t;
+    // cin>>t;
     while(t--) solve();
     return 0;
 }

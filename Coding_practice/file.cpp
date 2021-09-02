@@ -64,8 +64,32 @@ int gcd(int a, int b) {
     while (b) b ^= a ^= b ^= a %= b;
     return a;
 }
+string func(string& arr, int n)
+{
+    char a = arr[n-1];
+    for(int i = n-1; i>=0 ; i--)
+    {
+        arr[i] = arr[i-1];
+    }
+    arr[0] = a;
+    return arr;
+}
 void solve(){
-    cout << ppc(10) << n1;
+  
+    string s;
+    cin >> s;
+    string s1;
+    cin >> s1;
+    int n = s.size();
+    for(int i = 0; i < n ; i++)
+    {
+        string temp = func(s,n);
+        if(!temp.compare(s1))
+        {
+            cout << "YES";
+            break;
+        }
+    }
 }   
 signed main(){
     ios_base::sync_with_stdio(false);

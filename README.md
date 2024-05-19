@@ -1,7 +1,17 @@
 # Cp
-DSA 450 questions.
-Topic-wise implementation of different Data Structures & Algorithms including graphs, trees, arrays, strings etc.
-Contributors - @packedlama - Laksh Sadhwani
-             	      @NegaMage - Feyaz Baker
-               	      @Shreya Chandra
-                        @Sachin Pandey
+I solve DSA questions!
+You can find the problems and the solutions folder wise in this repository
+
+## Code Compilation
+```
+g++ program.cpp -o program
+```
+
+## Running Code
+```
+./program
+```
+
+## Contributors
+
+#### packedlama aka Laksh Sadhwani

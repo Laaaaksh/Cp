@@ -1,0 +1,23 @@
+[
+	{
+		"correct_answers":
+		[
+			"GCD of 1 and 2 is 1\nLCM of 1 and 2 is 2\nIs 1 prime? No"
+		],
+		"test": "1\n2\n"
+	},
+	{
+		"correct_answers":
+		[
+			"GCD of 4 and 5 is 1\nLCM of 4 and 5 is 20\nIs 4 prime? No"
+		],
+		"test": "4\n5\n"
+	},
+	{
+		"correct_answers":
+		[
+			"GCD of 2 and 3 is 1\nLCM of 2 and 3 is 6\nIs 2 prime? Yes"
+		],
+		"test": "2\n3\n"
+	}
+]

@@ -45,30 +45,21 @@ void markZeros(vii &array, int rows, int cols)
     REP(i,rows){
         REP(j, cols){
            if(array[i][j] == 0){
-            if(i == 0){
-                array[0][0] = 0;
-                continue;
-            }
             if(j == 0){
                 extra_col = 0;
-                continue;
+            }else {
+                array[0][j] = 0;
             }
             array[i][0] = 0;
-            array[0][j] = 0;
            } 
         } 
     }
     
     FOR(i,1, rows){
         FOR(j,1, cols){
-            if(array[i][0] == 0){
-                FOR(m,1,cols){
-                    array[i][m] = 0;
-                }
-            }
-            if(array[0][j] == 0){
-                FOR(n,1,rows){
-                    array[n][j] = 0;
+            if(array[i][j]!=0){
+                if(array[i][0] == 0 || array[0][j] == 0){
+                    array[i][j] = 0;
                 }
             }
         }
@@ -91,7 +82,7 @@ void markZeros(vii &array, int rows, int cols)
 int main() {
     FASTIO;
 
-    vii array = {{1,1,1}, {1,0,1}, {1,1,1}};
+    vii array = {{0,1,1}, {1,0,1}, {1,1,1}};
     int rows = array.size();
     int cols = array[0].size();
     _print(array);

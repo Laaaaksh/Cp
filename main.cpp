@@ -17,7 +17,7 @@ const double EPS = 1e-9; // Epsilon
 #define FOR(i, a, b) for (int i = a; i < b; ++i)
 #define REP(i, n) FOR(i, 0, n)
 #define RFOR(i, a, b) for (int i = a; i >= b; --i)
-#define RREP(i, n) RFOR(i, n, 0	)
+#define RREP(i, n) RFOR(i, n, 0)
 #define all(x) x.begin(), x.end()
 
 // Fast I/O methods
@@ -37,21 +37,6 @@ template<typename T> bool isPrime(T n) { if (n <= 1) return false; for (T i = 2;
 
 int main() {
     FASTIO;
-
-    // Your code starts here
-    
-    int a;
-    int b;
-    // Example usage of utility functions
-    cin>> a;
-    cin >> b;
-    cout << "GCD of " << a << " and " << b << " is " << gcd(a, b) << endl;
-    cout << "LCM of " << a << " and " << b << " is " << lcm(a, b) << endl;
-    cout << "Is " << a << " prime? " << (isPrime(a) ? "Yes" : "No") << endl;
-
-    // Your code ends here
-
-
 
     return 0;
 }

@@ -38,28 +38,5 @@ template<typename T> bool isPrime(T n) { if (n <= 1) return false; for (T i = 2;
 int main() {
     FASTIO;
 
-    // Your code starts here
-
-    // Example usage of utility functions
-    int a = 12, b = 18;
-    cout << "GCD of " << a << " and " << b << " is " << gcd(a, b) << endl;
-    cout << "LCM of " << a << " and " << b << " is " << lcm(a, b) << endl;
-    cout << "Is " << a << " prime? " << (isPrime(a) ? "Yes" : "No") << endl;
-
-    // Your additional functions here
-    // Example:
-    int n;
-    cin >> n;
-    vi v(n);
-    REP(i, n) cin >> v[i];
-    sort(all(v));
-    cout << "Sorted array: ";
-    for (int num : v) cout << num << " ";
-    cout << endl;
-
-    // Your code ends here
-
-
-
     return 0;
 }

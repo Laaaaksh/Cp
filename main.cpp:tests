@@ -19,5 +19,15 @@
 			"GCD of 2 and 3 is 1\nLCM of 2 and 3 is 6\nIs 2 prime? Yes"
 		],
 		"test": "2\n3\n"
+	},
+	{
+		"correct_answers":
+		[
+			"GCD of 2 and 3 is 1\nLCM of 2 and 3 is 6\nIs 2 prime? Yes"
+		],
+		"test": "2\n3\n"
+	},
+	{
+		"test": "4\n5\n"
 	}
 ]

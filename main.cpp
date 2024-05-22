@@ -7,6 +7,7 @@ typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<pii> vpii;
+typedef vector<vector<int>> vii;
 
 // Constants
 const int INF = 1e9; // Infinity

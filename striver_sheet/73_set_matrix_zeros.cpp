@@ -7,6 +7,7 @@ typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef vector<pii> vpii;
+typedef vector<vector<int>> vii;
 
 // Constants
 const int INF = 1e9; // Infinity
@@ -18,7 +19,6 @@ const double EPS = 1e-9; // Epsilon
 #define REP(i, n) FOR(i, 0, n)
 #define RFOR(i, a, b) for (int i = a; i >= b; --i)
 #define RREP(i, n) RFOR(i, n, 0)
-#define all(x) x.begin(), x.end()
 
 // Fast I/O methods
 #define FASTIO ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -35,8 +35,69 @@ template<typename T> T gcd(T a, T b) { return b == 0 ? a : gcd(b, a % b); }
 template<typename T> T lcm(T a, T b) { return (a / gcd(a, b)) * b; }
 template<typename T> bool isPrime(T n) { if (n <= 1) return false; for (T i = 2; i * i <= n; ++i) if (n % i == 0) return false; return true; }
 
+// 1 0 1
+// 0 0 1
+// 1 1 1
+void markZeros(vii &array, int rows, int cols)
+{
+    int extra_col = 1;
+    
+    REP(i,rows){
+        REP(j, cols){
+           if(array[i][j] == 0){
+            if(i == 0){
+                array[0][0] = 0;
+                continue;
+            }
+            if(j == 0){
+                extra_col = 0;
+                continue;
+            }
+            array[i][0] = 0;
+            array[0][j] = 0;
+           } 
+        } 
+    }
+    
+    FOR(i,1, rows){
+        FOR(j,1, cols){
+            if(array[i][0] == 0){
+                FOR(m,1,cols){
+                    array[i][m] = 0;
+                }
+            }
+            if(array[0][j] == 0){
+                FOR(n,1,rows){
+                    array[n][j] = 0;
+                }
+            }
+        }
+    }
+    
+    if(array[0][0] == 0){
+        FOR(i,1,cols){
+            array[0][i] = 0;
+        }
+    }
+    
+    if(extra_col == 0){
+        FOR(j,1, rows){
+            array[j][0] = 0;
+        }
+    }
+    
+    return;
+}
 int main() {
     FASTIO;
+
+    vii array = {{1,1,1}, {1,0,1}, {1,1,1}};
+    int rows = array.size();
+    int cols = array[0].size();
+    _print(array);
+    markZeros(array,rows, cols);
+    cout << "\n";
+    _print(array);
 
     return 0;
 }

@@ -38,19 +38,36 @@ template<typename T> bool isPrime(T n) { if (n <= 1) return false; for (T i = 2;
 
 void solve(){
     string s;
-    getline(cin, s);
+    cin >> s;
     int n;
     n = s.size();
     int index = -1;
-    REP(i,n){
-        if(s[i]=='0'){
-            index = i;
+    for(int j = 0 ; j < n ; j++) {
+        if(s[j]=='0') {
+            index = j;
+            break;
         }
     }
-    if(index == n){
-        cout << 1 << " " << n << " " << n << " " << n ;
+    
+    if(index == -1){
+        cout << 1 << " " << n << " " << n << " " << n << "\n";
         return ;
     }
+
+    int prev;
+    prev = index - 1;
+    int m;
+    int i = 0;
+    for(i = index, m = prev; i < n && m > -1 ; i++,m--){
+        if(s[i] == '1'){
+                break;
+        }
+    }
+    m++;
+
+    cout << 1 << " " << n <<  " " << m + 1 << " " << n-index + m << "\n";
+
+    return;
 }
 int main() {
     FASTIO;

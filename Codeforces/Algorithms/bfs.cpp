@@ -37,14 +37,29 @@ template<typename T> T lcm(T a, T b) { return (a / gcd(a, b)) * b; }
 template<typename T> bool isPrime(T n) { if (n <= 1) return false; for (T i = 2; i * i <= n; ++i) if (n % i == 0) return false; return true; }
 
 
-void dfs(int node, vii& graph, vector<bool>& visited){
+void bfs(int node, vii& graph, vector<bool>& visited){
 
-    cout << node << " ";
+    queue<int> q;
+    q.push(node);
     visited[node] = true;
 
+    while(q.empty() == false){
+
+        int front = q.front();
+        q.pop();
+
+        cout << front << " ";
+
+        for(auto i : graph[front]){
+            if(visited[i] == false){
+                visited[i] = true;
+                q.push(i);
+            }
+        }
+    }
     for(auto i: graph[node]){
         if(visited[i] == false){
-            dfs(i, graph, visited);
+            bfs(i, graph, visited);
         }
     }
 
@@ -56,7 +71,13 @@ void solve(vii& graph){
    int n = graph.size();
    vector<bool> visited(n,false);
 
-   dfs(0,graph,visited);
+   bfs(0,graph,visited);
+
+   REP(i,n){
+    if(visited[i] == false){
+        bfs(i,graph,visited);
+    }
+   }
 
    return;
 }

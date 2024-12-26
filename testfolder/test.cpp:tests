@@ -4,15 +4,24 @@
 		[
 			"1 printed n"
 		],
-		"test": "1\n"
+		"test": "1\n2\n3 4\n"
 	},
 	{
-		"test": "1\n"
+		"test": "1\n2\n3 4\n"
 	},
 	{
-		"test": ""
+		"test": "5\n2\n1 2\n0 3\n0 4\n1\n2\n3\n4\n4\n4\n4\n412\n12\n"
 	},
 	{
-		"test": ""
+		"test": "1\n1\n1\n"
+	},
+	{
+		"test": "1\n2\n2\n3\n"
+	},
+	{
+		"test": "5\n2\n1\n2\n2\n0\n3\n2\n0\n4\n1\n1\n1\n2\n"
+	},
+	{
+		"test": "5\n2 1 2\n1 3\n1 4\n0\n0\n"
 	}
 ]

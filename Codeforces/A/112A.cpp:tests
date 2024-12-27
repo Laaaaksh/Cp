@@ -1,0 +1,30 @@
+[
+	{
+		"correct_answers":
+		[
+			"0"
+		],
+		"test": "aaaa\naaaA\n"
+	},
+	{
+		"correct_answers":
+		[
+			"-1"
+		],
+		"test": "abs\nAbz\n",
+		"uncorrect_answers":
+		[
+			"1"
+		]
+	},
+	{
+		"correct_answers":
+		[
+			"-1"
+		],
+		"test": "abs\nAbz\n"
+	},
+	{
+		"test": "abcdefg\nAbCdEfF\n"
+	}
+]

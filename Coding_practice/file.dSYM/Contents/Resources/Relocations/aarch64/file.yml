@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/laksh.sadhwani/Documents/Github/Cp/Coding_practice/file'
+relocations:
+  - { offset: 0xDF32, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x47940, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0xE3A1, size: 0x8, addend: 0x0, symName: __ZL3INF, symObjAddr: 0x118, symBinAddr: 0x100003E80, symSize: 0x0 }
+  - { offset: 0xE3B7, size: 0x8, addend: 0x0, symName: __ZL6LL_INF, symObjAddr: 0x120, symBinAddr: 0x100003E88, symSize: 0x0 }
+  - { offset: 0xE3CD, size: 0x8, addend: 0x0, symName: __ZL3EPS, symObjAddr: 0x128, symBinAddr: 0x100003E90, symSize: 0x0 }
+  - { offset: 0xE4FE, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xD0, symBinAddr: 0x100003D48, symSize: 0x48 }
+  - { offset: 0xE51C, size: 0x8, addend: 0x0, symName: __Z5solvev, symObjAddr: 0x0, symBinAddr: 0x100003C78, symSize: 0xD0 }
+...

@@ -36,13 +36,39 @@ template<typename T> T gcd(T a, T b) { return b == 0 ? a : gcd(b, a % b); }
 template<typename T> T lcm(T a, T b) { return (a / gcd(a, b)) * b; }
 template<typename T> bool isPrime(T n) { if (n <= 1) return false; for (T i = 2; i * i <= n; ++i) if (n % i == 0) return false; return true; }
 
-
 int main() {
     FASTIO;
+
     int n;
     cin >> n;
-    int target;
-    cin >> target;
-  
+    vector<int> vec(n);
+    for (int i = 0; i < n; i++) {
+        cin >> vec[i];
+    }
+
+    vector<int> leftmax(n);
+    vector<int> rightmin(n);
+
+    // Fill leftmax
+    leftmax[0] = vec[0];
+    for (int i = 1; i < n; ++i) {
+        leftmax[i] = max(leftmax[i - 1], vec[i]);
+    }
+
+    // Fill rightmin
+    rightmin[n - 1] = vec[n - 1];
+    for (int i = n - 2; i >= 0; --i) {
+        rightmin[i] = min(rightmin[i + 1], vec[i]);
+    }
+
+    // Check middle elements (excluding ends)
+    for (int i = 1; i < n - 1; ++i) {
+        if (leftmax[i - 1] <= vec[i] && rightmin[i + 1] >= vec[i]) {
+            cout << vec[i] << "\n";
+            return 0;
+        }
+    }
+
+    cout << -1 << "\n"; // if no such element exists
     return 0;
 }
